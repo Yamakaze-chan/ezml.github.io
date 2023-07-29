@@ -21,9 +21,15 @@ header {
 
 .navbar_homepage {
     position: absolute;
-    flex: auto;
     top: 180px;
     
+}
+
+.navbar_section {
+  position: absolute;
+  top: 240px;
+  padding: 0px;
+  margin: 0px;
 }
 
 ul {
@@ -33,11 +39,12 @@ ul {
     padding: 0;
     overflow: hidden;
     position: fixed;
-    width: 100%;
   }
 
   li {
     float: left;
+    border:#aaa;
+
   }
 
   li a {
@@ -48,8 +55,47 @@ ul {
     text-decoration: none;
     font-family: 'Orbitron', serif;
     font-weight: bold;
+    
   }
   
   li a:hover:not(.active) {
     background-color: blue;
   }
+
+  nav {
+    float: left;
+    width: 30%;
+    padding: 0px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+    top: 300px;
+  }
+
+article {
+    margin-left: 31%;
+    left: 300px;
+    width: 69%;
+    background-color: #f1f1f1;
+  }
+
+nav ul button {
+  text-decoration: none;
+  display: block;
+  width: 250px;
+  background: white;
+  color: black;
+  box-shadow: 2px 2px 2px cadetblue;
+  border-radius: 8px;
+  margin: 5px;    
+  padding: 10px;
+}
