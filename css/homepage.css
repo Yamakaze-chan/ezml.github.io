@@ -27,7 +27,7 @@ header {
 
 .navbar_section {
   position: absolute;
-  top: 240px;
+
   padding: 0px;
   margin: 0px;
 }
@@ -89,13 +89,40 @@ article {
   }
 
 nav ul button {
+  font-family: 'Orbitron', serif;
   text-decoration: none;
   display: block;
   width: 250px;
-  background: white;
+  background: yellow;
   color: black;
   box-shadow: 2px 2px 2px cadetblue;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin: 5px;    
+  padding: 10px;
+}
+
+nav ul button:hover {
+  font-family: 'Orbitron', serif;
+  text-decoration: none;
+  display: block;
+  width: 250px;
+  background: orchid;
+  color: black;
+  box-shadow: 2px 2px 2px cadetblue;
+  border-radius: 10px;
+  margin: 5px;    
+  padding: 10px;
+}
+
+.navbar_section_active {
+  font-family: 'Orbitron', serif;
+  text-decoration: none;
+  display: block;
+  width: 250px;
+  background: greenyellow;
+  color: black;
+  box-shadow: 2px 2px 2px cadetblue;
+  border-radius: 10px;
   margin: 5px;    
   padding: 10px;
 }
