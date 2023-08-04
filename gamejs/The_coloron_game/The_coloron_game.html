@@ -1,0 +1,173 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    
+  
+      <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  
+      <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+      <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+      <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  
+  
+  
+    
+      <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+  
+  
+    <title>CodePen - COLORON GAME</title>
+  
+      <link rel="canonical" href="https://codepen.io/gregh/pen/yVLOyO">
+    <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>COLORON GAME: inspiring developers to use SVG Animations, ES6 and Flexbox</title>
+  <meta name="description" content="A game made to inspire developers to use GSAP, ES6 and Flexbox">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  
+  <link rel="apple-touch-icon" href="https://greghub.github.io/coloron/public/images/touch-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://greghub.github.io/coloron/public/images/touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://greghub.github.io/coloron/public/images/touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://greghub.github.io/coloron/public/images/touch-icon-ipad-retina.png">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@CodePen">
+  <meta name="twitter:title" content="COLORON GAME: inspiring developers to use SVG Animations, ES6 and Flexbox">
+  <meta name="twitter:description" content="A game made to inspire developers to use GSAP, ES6 and Flexbox">
+  <meta name="twitter:creator" content="@greghvns">
+  <meta name="twitter:image" content="https://greghub.github.io/coloron/public/images/coloron-image.png">
+  
+  <meta property="og:image" content="https://greghub.github.io/coloron/public/images/coloron-image.png">
+  <meta property="og:title" content="COLORON GAME: inspiring developers to use SVG Animations, ES6 and Flexbox">
+  <meta property="og:url" content="https://codepen.io/gregh/pen/yVLOyO">
+  <meta property="og:site_name" content="CodePen">
+  <meta property="og:description" content="A game made to inspire developers to use GSAP, ES6 and Flexbox">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,900">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./The_coloron_game.css" type="text/css">
+    
+  
+  
+    
+    
+    
+  </head>
+  
+  <body>
+    
+    <!--
+  design by https://www.behance.net/vahanhovh
+  -->
+  <div class="splash"></div>
+  <div class="container" style="transform: scale(0.3525); height: 800px; width: 1015.6px; transform-origin: left top;">
+  </div>
+              <div class="start-game game-full-flex" id="start-game" style="display: flex;">
+                  
+                  <div class="start-game-top"><a class="play-full-page" href="https://codepen.io/gregh/details/yVLOyO" target="_blank" style="display: block;">Source Code</a></div>    
+  
+                  <div class="logo-holder" style="opacity: 1;">
+                      <p class="logo">
+                          <span style="opacity: 1;">C</span>
+                          <span style="opacity: 1;">o</span>
+                          <span style="opacity: 1;">l</span>
+                          <span style="opacity: 1;">o</span>
+                          <span style="opacity: 1;">r</span>
+                          <span style="opacity: 1;">o</span>
+                          <span style="opacity: 1;">n</span>
+                      </p>
+                      <a class="play-button" href="#" onclick="game.start()">Play</a>
+                      <a class="play-button" href="../../html/game.html" >Exit</a>
+                      <h4 class="hint">hint: <span>red</span> color always comes first</h4>
+                  </div>
+  
+                  <div class="how-to-play">
+                      <div class="section section-1">
+                          <h4>Bouncing ball<br>changes color</h4>
+                          <div class="content">
+                              <div class="ball-demo" id="ball-demo" style="transform: translate3d(0px, 45.6533px, 0px) scale(1, 1.04565); background-color: rgb(130, 96, 246);"></div>
+                          </div>
+                      </div>
+                      <div class="section section-2">
+                          <h4>Tap on the bar to switch the colors<br>(Red, Yellow, Purple)</h4>
+                          <div class="content">
+                              <div class="bar bar-1" data-index="0" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                              <div class="bar bar-2" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                              <div class="bar bar-3" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                          </div>
+                      </div>
+                      <div class="section section-3">
+                          <h4>Always match the<br>ball and bar colors</h4>
+                          <div class="content">
+                              <div class="ball-demo" id="ball-demo" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                              <div class="bar bar-1" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                          </div>
+                      </div>
+                  </div>
+  
+              </div>
+  
+              <div class="stop-game game-full-flex" style="display: none;">
+  
+                  <div class="score-container">
+  
+                      <h1>Coloron</h1>
+  
+                      <div class="final-score"></div>
+                      <div class="result"></div>
+  
+                      <h4>Tweet to challenge friends</h4>
+  
+                      <p>
+                          <a class="tweet" href="#" onclick="game.generateTweet()">
+                              <i class="fa fa-twitter" aria-hidden="true"></i> Tweet
+                          </a>
+                      </p>
+  
+                      <div>
+                          <a class="play-again" href="#" onclick="game.start()">Play Again</a>
+                          <a class="main-menu" href="#" onclick="game.intro()">Menu</a>
+                      </div>
+  
+                  </div>
+  
+              </div>
+  
+              <div class="small-glows"><div class="small-glow" style="left: 299px; top: 90px; height: 10px; width: 10px;"></div><div class="small-glow" style="left: 1806px; top: 336px; height: 4px; width: 4px;"></div><div class="small-glow" style="left: 2956px; top: 138px; height: 11px; width: 11px;"></div><div class="small-glow" style="left: 2134px; top: 118px; height: 6px; width: 6px;"></div><div class="small-glow" style="left: 893px; top: 394px; height: 9px; width: 9px;"></div><div class="small-glow" style="left: 1945px; top: 273px; height: 6px; width: 6px;"></div><div class="small-glow" style="left: 2314px; top: 95px; height: 6px; width: 6px;"></div><div class="small-glow" style="left: 3856px; top: 255px; height: 6px; width: 6px;"></div><div class="small-glow" style="left: 3264px; top: 347px; height: 4px; width: 4px;"></div><div class="small-glow" style="left: 712px; top: 135px; height: 11px; width: 11px;"></div><div class="small-glow" style="left: 2216px; top: 323px; height: 9px; width: 9px;"></div><div class="small-glow" style="left: 329px; top: 178px; height: 9px; width: 9px;"></div><div class="small-glow" style="left: 2984px; top: 316px; height: 10px; width: 10px;"></div><div class="small-glow" style="left: 1160px; top: 329px; height: 9px; width: 9px;"></div><div class="small-glow" style="left: 3992px; top: 53px; height: 4px; width: 4px;"></div><div class="small-glow" style="left: 3370px; top: 333px; height: 9px; width: 9px;"></div><div class="small-glow" style="left: 2061px; top: 306px; height: 4px; width: 4px;"></div><div class="small-glow" style="left: 3955px; top: 131px; height: 7px; width: 7px;"></div><div class="small-glow" style="left: 4134px; top: 65px; height: 7px; width: 7px;"></div><div class="small-glow" style="left: 592px; top: 366px; height: 9px; width: 9px;"></div></div>
+  
+              <div class="glow"><div class="sun"></div></div>
+  
+              <div class="waves">
+                  <div class="top_wave"></div>
+                  <div class="wave1"></div>
+                  <div class="wave2"></div>
+                  <div class="wave3"></div>
+                  <div class="wave4"></div>
+              </div>
+  
+              <div class="mounts">
+                  <div class="mount1"></div>
+                  <div class="mount2"></div>
+              </div>
+  
+              <div class="clouds"></div>
+  
+              <div class="scene">
+                  <div class="learn-to-play">Click on the bars to change the color!</div>
+                  <div class="score" id="score"></div>
+                  <div class="ball-holder"></div>
+                  <div class="sticks" id="sticks" style="width: 1555.6px;"></div>
+              </div>
+  
+              <div class="noise"></div>
+  
+          </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script src="./The_coloron_game.js"></script>
+        
+ 
+  
+  
+  </body></html>
