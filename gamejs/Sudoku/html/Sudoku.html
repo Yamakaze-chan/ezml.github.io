@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="vi-VN">
+    <head>
+        <!--Page setup-->
+        <meta charset ="utf-8">
+        <!--Title of website-->
+        <title>EZML</title>
+        <meta name="description" content="A simple website about machine learning">
+        <meta name="author" content="Yamakaze">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--icon-->
+        <link rel="icon" type="image/png" href="image/icon.png">
+
+        <!--Stylesheet-->
+        <!-- Reset default styles and add support for google fonts -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+        <!--Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!--CSS-->
+        <link rel="stylesheet" href="../css/Sudoku.css" type="text/css">
+        <!--Script-->
+    </head>
+    <body>
+        <a href="#" id="sidebar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        
+        <h1 id="sudoku_title">SUDOKU</h1>
+        
+        <div id="sudoku_menu">
+        <ul>
+            <li><a class="restart" href="#">New Game</a></li>
+            <li><a class="return" href="../../../html/game.html">Quit</a></li>
+            <li><a style="background-color: azure; color:green" class="return" href="https://codepen.io/cristiancanea/pen/nJzmPd">Source code</a></li>
+            <li></li>
+        </ul>
+        </div>
+        
+        <div id="sudoku_container"></div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="../js/Sudoku.js"></script>
+    </body>

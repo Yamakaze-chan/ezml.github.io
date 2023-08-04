@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+    <head>
+        <!--Page setup-->
+        <meta charset ="utf-8">
+        <!--Title of website-->
+        <title>EZML</title>
+        <meta name="description" content="A simple website about machine learning">
+        <meta name="author" content="Yamakaze">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--icon-->
+        <link rel="icon" type="image/png" href="image/icon.png">
+
+        <!--Stylesheet-->
+        <!-- Reset default styles and add support for google fonts -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+        <!--Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--CSS-->
+        <link rel="stylesheet" href="./GSAP_animated_header.css" type="text/css">
+        <!--Script-->
+    </head>
+    <body>
+        <!--Return home button-->
+        <div class="navbar_homepage" id="navbar_hp" style="top: 0px;position: absolute; width: 100%;">
+            <div style="width:100% ;">
+              <a style="font-size: 16px; text-align: right;float: right; color: brown; text-decoration: none;"  href="https://codepen.io/Sicontis/pen/qBPNpmW"> Get source on Codepen.io </a>
+            </div>
+            <ul style="width: 100%;">
+                <li><i style="font-size:24px; color: white;" class="fa">&#xf100;</i><a style="position: absolute; top: 0px; left: 0px; color: red;" href="../../html/UI.html">Home</a></li>
+            </ul>
+          </div>
+        <!--UI-->
+        <div class="container">
+            <div class="slide-bar" id="slidebar">
+                <div class="bar" id="bar"></div>
+            </div>
+            <div class="text-block" id="textone">
+                <h1>CODEPEN</h1>
+            </div>
+            <div class="text-block" id="texttwo">
+                <h1>CHALLENGE</h1>
+            </div>
+        </div>
+    
+      <script src="./GSAP_animated_header.js"></script>
+    </body>
