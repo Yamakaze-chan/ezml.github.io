@@ -1,0 +1,143 @@
+
+html,
+body {
+height: 100%;
+}
+body {
+font-size: 100%;
+line-height: 1.5;
+font-family: Merriweather, serif;
+}
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+.group:after {
+content: "";
+display: table;
+clear: both;
+}
+img {
+max-width: 100%;
+height: auto;
+vertical-align: baseline;
+}
+a {
+text-decoration: none;
+}
+.container {
+background-image: url(https://unsplash.it/900/600?image=894);
+background-repeat: no-repeat;
+padding: 3em 0;
+}
+.top-matter {
+padding: 2em;
+float: right;
+max-width: 300px;
+}
+.top-matter * {
+color: #fffff0;
+}
+h1 {
+font-size: 3rem;
+line-height: 1;
+margin-bottom: 24px;
+text-align: right;
+direction: rtl;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+font-family: "News Cycle", sans-serif;
+}
+h1 span {
+display: block;
+text-transform: uppercase;
+font-size: 6rem;
+}
+.intro {
+text-align: right;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+.article-container {
+padding: 4em 2em;
+-moz-column-count: 5;
+        column-count: 5;
+-moz-column-width: 360px;
+        column-width: 360px;
+-moz-column-gap: 36px;
+        column-gap: 36px;
+-moz-column-fill: balance;
+        column-fill: balance;
+}
+.article-container p:first-child:first-letter {
+float: left;
+color: #1e3c5a;
+font-size: 81px;
+line-height: 60px;
+padding-top: 10px;
+padding-right: 8px;
+padding-left: 3px;
+font-weight: 700;
+}
+.article-container p {
+orphans: 3;
+widows: 3;
+position: relative;
+text-indent: 1em;
+}
+.article-container p:after {
+content: '';
+display: inline-table;
+height: 0px;
+margin-bottom: 0;
+}
+.article-container p:first-child {
+text-indent: 0;
+}
+.article-container img {
+display: block;
+max-width: 105%;
+margin: 0 -5%;
+padding: 19px 0;
+}
+@media only screen and (min-width: 900px) {
+.container {
+    background-image: url(https://unsplash.it/1900/1200?image=894);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: stretch;
+    padding: 0;
+}
+.top-matter {
+    background: #f0f0ff;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+}
+.top-matter .intro {
+    margin-top: auto;
+}
+.top-matter h1 {
+    text-shadow: none;
+    color: #111;
+    font-size: 5em;
+}
+.top-matter h1 span {
+    color: #285a78;
+    font-weight: 700;
+    font-size: 236px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25);
+}
+.intro p {
+    text-shadow: none;
+    font-size: 2em;
+    color: #444;
+    line-height: 1.2;
+    font-style: italic;
+}
+}
+
+
