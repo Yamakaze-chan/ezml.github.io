@@ -1,27 +1,3 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js'
-
-    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
-    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js'
-
-    // Add Firebase products that you want to use
-    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js'
-    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js'
-
-    const firebaseConfig = {
-    apiKey: "AIzaSyDRAme89YeF3N2fmyjGKTujp6jxyE9ZAL0",
-    authDomain: "ezml-2ddce.firebaseapp.com",
-    projectId: "ezml-2ddce",
-    storageBucket: "ezml-2ddce.appspot.com",
-    messagingSenderId: "198434711296",
-    appId: "1:198434711296:web:41d196e34df029475a35e5",
-    measurementId: "G-QEF7VZJT78"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    console.log(app.name);
-    const analytics = getAnalytics(app);
-
 // Get The Date
 var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];

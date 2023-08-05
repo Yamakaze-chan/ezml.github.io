@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="vi-VN">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>CodePen Demo</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./Upload_img.css" type="text/css">
+    </head>
+<body>
+    <!--Return home button-->
+    <div class="navbar_homepage" id="navbar_hp" style="top: 0px;position: absolute; width: 100%;">
+        <div style="width:100% ;">
+          <a style="font-size: 16px; text-align: right;float: right; color: brown; text-decoration: none;"  href="https://codepen.io/mahtab-alam/pen/MZVvzo"> Get source on Codepen.io </a>
+        </div>
+        <ul style="width: 100%;">
+            <li style="list-style-type: none;"><a style="position: absolute; top: 0px; left: 0px; color: red; text-decoration: none;" href="../../html/UI.html">Home</a></li>
+        </ul>
+      </div>
+<main class="main_full">
+	<div class="container">
+		<div class="panel">
+			<div class="button_outer">
+				<div class="btn_upload">
+					<input type="file" id="upload_file" name="">
+					Upload Image
+				</div>
+				<div class="processing_bar"></div>
+				<div class="success_box"></div>
+			</div>
+		</div>
+		<div class="error_msg"></div>
+		<div class="uploaded_file_view" id="uploaded_view">
+			<span class="file_remove">X</span>
+		</div>
+	</div>
+    <script src="./Upload_img.js"></script>
+</main>
+</body>
