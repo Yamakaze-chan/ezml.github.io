@@ -1,0 +1,72 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+     
+    <title>CodePen - Canvas Drawer</title>
+
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Canvas_drawer.css" type="text/css">
+  
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+  </head>
+  
+  <body>
+    
+    
+  </div>
+  <!-- side pane -->
+  <div class="sidepane col-sm-2 col-md-2 col-lg-2">
+    <ul style="width: 100%;">
+        <li style="list-style-type: none;"><a style="position: absolute; top: 0px; left: 0px; color: red; text-decoration: none;" href="../../html/UI.html">Home</a></li>
+    </ul>
+    <a style="font-size: 16px; text-align: right;float: left; color: brown; text-decoration: none;"  href="https://codepen.io/HarryDao/pen/OWvBGO"> Get source on Codepen.io </a>
+    <div class="form">
+      <h3>Form</h3>
+        <input id="fileInput" type="file" class="form-control" placeholder="Upload Your Images" name="upload">
+        <button id="submit" class="btn btn-default" onclick="upload()">upload</button>
+    </div>
+    <hr>
+    <div class="assets">
+      <h3>Assets</h3>
+      <div class="text">
+          <h4>Text</h4>
+          <button id="addText" class="btn btn-default" onclick="addText()">Add Text</button>
+      </div>
+      <div class="image">
+          <h4>Images</h4>
+          <p><em>(<strong class="text-danger">Double Click</strong> to upload to canvas)</em></p>
+          <ul class="list-unstyled" id="iconList">
+        </div>
+    </div>
+  </div>
+  
+  <!-- canvas -->
+  <div class="canvas col-sm-7 col-md-7 col-lg-7">
+      <div class="block" id="canvasList" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
+  
+      </div>
+  </div>
+  
+  <!-- bin -->
+  <div class="col-sm-2 col-md-2 col-lg-2 text-center" ondrop="bin_drop_handler(event);" ondragover="bin_dragover_handler(event);" ondragleave="bin_dragleave_handler(event);">
+    <div class="row">
+      <p style="padding:20px"></p>
+      <h3><em><strong class="text-danger">Drag</strong> canvas item here to remove</em></h3>    
+    </div>
+    <div class="row" id="bin" style="background-color: white;">
+      <img class="img-responsive bin-box" src="http://vignette2.wikia.nocookie.net/enanimanga/images/0/07/Garbage_bin_icon.png/revision/latest?cb=20120203172546" draggable="false">
+    </div>
+  </div>
+  <script src="./Canvas_drawer.js"></script>
+  
+    
+  
+  
+  
+  </body></html>

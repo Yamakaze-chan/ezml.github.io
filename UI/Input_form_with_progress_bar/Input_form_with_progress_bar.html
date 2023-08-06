@@ -1,0 +1,156 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CodePen - Input form with progress bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./Input_form_with_progess_bar.css" type="text/css">
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+  </head>
+  
+  <body>
+    <!--Return home button-->
+    <div class="navbar_homepage" id="navbar_hp" style="top: 0px;position: absolute; width: 100%;">
+        <div style="width:100% ;">
+          <a style="font-size: 16px; text-align: right;float: right; color: brown; text-decoration: none;"  href="https://codepen.io/carlinscuderi/pen/XmeyvV"> Get source on Codepen.io </a>
+        </div>
+        <ul style="width: 100%;">
+            <li style="list-style-type: none;"><a style="position: absolute; top: 0px; left: 0px; color: red; text-decoration: none;" href="../../html/UI.html">Home</a></li>
+        </ul>
+      </div>
+    <section class="section">
+      <h1>So you think you can create an ID?</h1>
+  
+      <div class="form-progress">
+          <progress class="form-progress-bar" min="0" max="100" value="0" step="33" aria-labelledby="form-progress-completion"></progress>
+          
+          <div class="form-progress-indicator one active"></div>
+          <div class="form-progress-indicator two"></div>
+          <div class="form-progress-indicator three"></div>
+          <div class="form-progress-indicator four"></div>
+          
+          <p id="form-progress-completion" class="js-form-progress-completion sr-only" aria-live="polite">99% complete</p>
+      </div>
+      
+      
+      <div class="animation-container" style="padding-bottom: 529px;">
+          <!-- Step one -->
+          <div class="form-step js-form-step" data-step="1">
+  
+              <p class="form-instructions"><strong>Click the continue button to show form progression.</strong><br>
+                  Please fill out the fields below so we can learn some information about you. We promise to store these on Post-It<sup><small>TM</small></sup> notes around the office.</p>
+  
+              <form action="" name="form-step-1">
+                  <div class="fieldgroup">
+                      <input type="text" name="firstName" id="firstName" class="">
+                      <label for="firstName">First name</label>
+                  </div>
+  
+                  <div class="fieldgroup">
+                      <input type="text" name="lastName" id="lastName" class="">
+                      <label for="lastName">Last name</label>
+                  </div>
+  
+                  <div class="fieldgroup">
+                      <input type="text" name="email" id="email" class="">
+                      <label for="email">Email</label>
+                  </div>
+  
+                  <div class="fieldgroup">
+                      <input type="text" name="postalCode" id="postalCode" class="">
+                      <label for="postalCode">Postal code</label>
+                  </div>
+  
+                  <div class="buttons">
+                              <button type="button" class="btn btn-alt js-reset">Reset</button>
+  
+                          <button type="submit" class="btn">Continue</button>
+                  </div>
+              </form>
+  
+          </div>
+          
+              <!-- Step two -->
+              <div class="form-step js-form-step hidden waiting" data-step="2">
+  
+                  <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
+                          <br> Please fill in the token below with yesterday's date plus the timestamp from the day of your birth (expressed as an integer) to the power of fourteen divided by two.</p>
+  
+                  <form action="" name="form-step-2">
+                          <div class="fieldgroup">
+                                  <input type="text" name="token" id="token" class="">
+                                  <label for="token">Token</label>
+                          </div>
+  
+                          <div class="buttons">
+                                  <button type="button" class="btn btn-alt js-reset">Reset</button>
+  
+                                  <button type="submit" class="btn">Continue</button>
+                          </div>
+                  </form>
+  
+          </div>
+          
+          
+          
+                      <!-- Step three -->
+              <div class="form-step js-form-step hidden waiting" data-step="3">
+  
+                  <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
+                          <br> Please tell us your credit card information. We promise not to store it or use it to buy a new iPhone in the App Store.</p>
+  
+                  <form action="" name="form-step-3">
+                          <div class="fieldgroup">
+                                  <input type="text" name="credit-card" id="credit-card" class="">
+                                  <label for="credit-card">Credit card number</label>
+                          </div>
+                      
+                          <div class="fieldgroup">
+                                  <input type="text" name="credit-card-expiry" id="credit-card-expiry" class="">
+                                  <label for="credit-card-expiry">Credit card expiry</label>
+                          </div>
+  
+                          <div class="buttons">
+                                  <button type="button" class="btn btn-alt js-reset">Reset</button>
+  
+                                  <button type="submit" class="btn">Continue</button>
+                          </div>
+                  </form>
+  
+          </div>
+          
+          
+          
+          <!-- Step four -->
+              <div class="form-step js-form-step hidden waiting" data-step="4">
+  
+                  <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
+                          <br> Finally, please just write the words "I Agree" in the field below to consent to us using the previous data you entered to buy a new iPhone.</p>
+  
+                  <form action="" name="form-step-4">
+                          <div class="fieldgroup">
+                                  <input type="text" name="agreen" id="agreen" class="">
+                                  <label for="agreen">I agree</label>
+                          </div>
+  
+                          <div class="buttons">
+                                  <button type="button" class="btn btn-alt js-reset">Reset</button>
+                          </div>
+                  </form>
+  
+          </div>
+      </div>
+  </section>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./Input_form_with_progress_bar.js"></script>
+        
+  
+    
+  
+  
+  
+  </body></html>

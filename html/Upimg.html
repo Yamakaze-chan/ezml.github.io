@@ -2,32 +2,80 @@
 <html>
 <head>
    <title>Firebase Image Upload using HTML and JavaScript</title>
-   <style>
-      #photo{
-         margin-top: 200px;
-         margin-left: 450px;
-      }
-      #upload{
-         margin-top: 20px;
-         margin-left: 450px;
-      }
-   </style>
+   <link rel="stylesheet" href="../css/Upimg.css" type="text/css">
 </head>
 <body>
-    <!--Return home button-->
-    <div class="navbar_homepage" id="navbar_hp" style="top: 0px;position: absolute; width: 100%;">
-        <div style="width:100% ;">
-          <a style="font-size: 16px; text-align: right;float: right; color: brown; text-decoration: none;"  href="https://codepen.io/ziga-miklic/pen/QWrGyW"> Get source on Codepen.io </a>
-        </div>
-        <ul style="width: 100%;">
+   <div style="margin-top: 0px; margin-left: 0px; height: 100%; width: 100%;">
+      <!--Page-->
+      <div style="width: 40%; float:left">
+         <!--Return home button-->
+      <div class="navbar_homepage" id="navbar_hp" style="top: 0px;position: absolute; width: 100%;">
+         <ul style="width: 100%;">
             <li style="list-style-type: none;"><a style="position: absolute; top: 0px; left: 0px; color: red; text-decoration: none;" href="../index.html">Home</a></li>
-        </ul>
+         </ul>
       </div>
-   <input type="file" id="photo" /></br>
-   <button id="upload" onclick="uploadImage()">Upload Image</button>
+         <div>
+            <h1> Writer </h1>
+            <input type="text" id="blog_writer"></br>
+            <h1> Title </h1>
+            <input type="text" id="blog_title"></br>
+            <h1> Content </h1>
+            <input type="text" id="blog_content"></br>
+         </div>
+
+      
+         <!-- side pane -->
+         <div class="sidepane col-sm-2 col-md-2 col-lg-2">
+            <div class="form">
+               <h3>Form</h3>
+                  <input id="fileInput" type="file" class="form-control" placeholder="Upload Your Images" name="upload">
+                  <button id="submit" class="btn btn-default" onclick="upload()">upload</button>
+            </div>
+         <hr>
+         <div class="assets">
+            <h3>Assets</h3>
+            <div class="text">
+               <h4>Text</h4>
+               <button id="addText" class="btn btn-default" onclick="addText()">Add Text</button>
+            </div>
+            <div class="image">
+               <h4>Images</h4>
+               <p><em>(<strong class="text-danger">Double Click</strong> to upload to canvas)</em></p>
+               <ul class="list-unstyled" id="iconList">
+               </div>
+         </div>
+         <div>
+         <input type="file" id="photo" /></br>
+         <button id="upload" onclick="uploadImage()">Upload Image</button>
+         </div>
+      </div>
+   </div>
+
+   <div style="width: 5%; float:right">
+      <!-- bin -->
+      <div ondrop="bin_drop_handler(event);" ondragover="bin_dragover_handler(event);" ondragleave="bin_dragleave_handler(event);">
+         <div class="row">
+            <text>Drag canvas item here to remove</text>    
+         </div>
+         <div class="row" id="bin" style="background-color: white;">
+            <img style="width: 100%;" src="http://vignette2.wikia.nocookie.net/enanimanga/images/0/07/Garbage_bin_icon.png/revision/latest?cb=20120203172546" draggable="false">
+         </div>
+      </div>
+   </div>
+
+   <div style="width: 55%; float:right">
+      <!-- canvas -->
+      <div class="canvas col-sm-7 col-md-7 col-lg-7">
+         <div class="block" id="canvasList" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
+
+         </div>
+      </div>
+   </div>
+</div>
 </body>
 <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+<script src="../js/Upimg.js"></script>
 <script>
 
    //paste here your copied configuration code
